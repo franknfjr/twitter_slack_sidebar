@@ -26,9 +26,9 @@ class HomeController: UITableViewController {
             // final position to animate our menuController object
             self.menuController.view.transform = .identity
         })
-//        
-//        menuController.view.removeFromSuperview()
-//        menuController.removeFromParent()
+        //
+        //        menuController.view.removeFromSuperview()
+        //        menuController.removeFromParent()
     }
     
     @objc func handleOpen() {
