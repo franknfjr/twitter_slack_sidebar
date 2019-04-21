@@ -22,10 +22,12 @@ class HomeController: UITableViewController {
     }
     
     @objc func handleOpen() {
-        let vc = MenuController()
-        vc.view.frame = CGRect(x: 0, y: 0, width: 300, height: self.view.frame.height)
+        let menuController = MenuController()
+        menuController.view.frame = CGRect(x: 0, y: 0, width: 300, height: self.view.frame.height)
         let mainWindows = UIApplication.shared.keyWindow
-        mainWindows?.addSubview(vc.view)
+        mainWindows?.addSubview(menuController.view)
+        
+        addChild(menuController)
     }
     
     fileprivate func setupNavigationItems() {
