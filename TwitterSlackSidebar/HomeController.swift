@@ -11,7 +11,7 @@ import UIKit
 class HomeController: UITableViewController {
     
     let menuController = MenuController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,17 +19,28 @@ class HomeController: UITableViewController {
         setupNavigationItems()
     }
     
+    fileprivate let menuWidth: CGFloat = 300
+    
     @objc func handleHide() {
-        print("hide menu...")
-        
-        menuController.view.removeFromSuperview()
-        menuController.removeFromParent()
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            // final position to animate our menuController object
+            self.menuController.view.transform = .identity
+        })
+//        
+//        menuController.view.removeFromSuperview()
+//        menuController.removeFromParent()
     }
     
     @objc func handleOpen() {
-        menuController.view.frame = CGRect(x: 0, y: 0, width: 300, height: self.view.frame.height)
+        // initial position
+        menuController.view.frame = CGRect(x: -menuWidth, y: 0, width: 300, height: self.view.frame.height)
         let mainWindows = UIApplication.shared.keyWindow
         mainWindows?.addSubview(menuController.view)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            // final position to animate our menuController object
+            self.menuController.view.transform = CGAffineTransform(translationX: self.menuWidth, y: 0)
+        })
         
         addChild(menuController)
     }
