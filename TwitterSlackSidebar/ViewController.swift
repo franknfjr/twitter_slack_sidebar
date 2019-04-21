@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +23,15 @@ class ViewController: UITableViewController {
     
     @objc func handleOpen() {
         print("open menu...")
+        
+        let vc = UIViewController()
+        vc.view.backgroundColor = .yellow
+        
+        view.addSubview(vc.view)
+        //        let blueView =  UIView()
+        //        blueView.backgroundColor = .blue
+        //        blueView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        //        view.addSubview(blueView)
     }
     
     fileprivate func setupNavigationItems() {
@@ -41,7 +50,5 @@ class ViewController: UITableViewController {
         
         return cell
     }
-
-
 }
 
