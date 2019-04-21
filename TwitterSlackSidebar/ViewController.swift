@@ -24,9 +24,9 @@ class ViewController: UITableViewController {
     @objc func handleOpen() {
         print("open menu...")
         
-        let vc = UIViewController()
-        vc.view.backgroundColor = .yellow
-        
+        let vc = MenuController()
+       
+        vc.view.frame = CGRect(x: 0, y: 0, width: 300, height: self.view.frame.height)
         let mainWindows = UIApplication.shared.keyWindow
         mainWindows?.addSubview(vc.view)
         
