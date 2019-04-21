@@ -13,9 +13,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Home"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: nil, action: #selector(handleOpen))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hide", style: .plain, target: nil, action: #selector(handleHide))
+        setupNavigationItems()
     }
     
     @objc func handleHide() {
@@ -24,6 +22,12 @@ class ViewController: UITableViewController {
     
     @objc func handleOpen() {
         print("open")
+    }
+    
+    fileprivate func setupNavigationItems() {
+        navigationItem.title = "Home"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: nil, action: #selector(handleOpen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hide", style: .plain, target: nil, action: #selector(handleHide))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
