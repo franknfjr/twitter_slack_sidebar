@@ -10,6 +10,8 @@ import UIKit
 
 class HomeController: UITableViewController {
     
+    let menuController = MenuController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,10 +21,12 @@ class HomeController: UITableViewController {
     
     @objc func handleHide() {
         print("hide menu...")
+        
+        menuController.view.removeFromSuperview()
+        menuController.removeFromParent()
     }
     
     @objc func handleOpen() {
-        let menuController = MenuController()
         menuController.view.frame = CGRect(x: 0, y: 0, width: 300, height: self.view.frame.height)
         let mainWindows = UIApplication.shared.keyWindow
         mainWindows?.addSubview(menuController.view)
