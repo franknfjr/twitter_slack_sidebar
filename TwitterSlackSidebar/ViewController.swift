@@ -8,11 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Home"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: nil, action: #selector(handleOpen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hide", style: .plain, target: nil, action: #selector(handleHide))
+    }
+    
+    @objc func handleHide() {
+        print("hide")
+    }
+    
+    @objc func handleOpen() {
+        print("open")
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cellId")
+        cell.textLabel?.text = "Row \(indexPath.row)"
+        
+        return cell
     }
 
 
