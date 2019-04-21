@@ -27,7 +27,10 @@ class ViewController: UITableViewController {
         let vc = UIViewController()
         vc.view.backgroundColor = .yellow
         
-        view.addSubview(vc.view)
+        let mainWindows = UIApplication.shared.keyWindow
+        mainWindows?.addSubview(vc.view)
+        
+        //        view.addSubview(vc.view)
         //        let blueView =  UIView()
         //        blueView.backgroundColor = .blue
         //        blueView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
