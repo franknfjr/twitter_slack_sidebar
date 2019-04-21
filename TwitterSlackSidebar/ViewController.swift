@@ -18,17 +18,17 @@ class ViewController: UITableViewController {
     }
     
     @objc func handleHide() {
-        print("hide")
+        print("hide menu...")
     }
     
     @objc func handleOpen() {
-        print("open")
+        print("open menu...")
     }
     
     fileprivate func setupNavigationItems() {
         navigationItem.title = "Home"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: nil, action: #selector(handleOpen))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hide", style: .plain, target: nil, action: #selector(handleHide))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(handleOpen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hide", style: .plain, target: self, action: #selector(handleHide))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
