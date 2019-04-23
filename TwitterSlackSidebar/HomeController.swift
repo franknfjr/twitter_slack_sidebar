@@ -11,6 +11,9 @@ import UIKit
 class HomeController: UITableViewController {
     
     let menuController = MenuController()
+    fileprivate let menuWidth: CGFloat = 300
+    fileprivate var isMenuOpened = false
+    fileprivate let velocityOpenThreshold: CGFloat = 500
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +27,16 @@ class HomeController: UITableViewController {
         view.addGestureRecognizer(panGesture)
     }
     
-    fileprivate let menuWidth: CGFloat = 300
-    
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: view)
-
+        
         if gesture.state == .changed {
             var x = translation.x
+            
+            if isMenuOpened {
+                x += menuWidth
+            }
+            
             x = min(menuWidth, x)
             x = max(0, x)
             
@@ -39,27 +45,61 @@ class HomeController: UITableViewController {
             menuController.view.transform = transform
             navigationController?.view.transform = transform
         } else if gesture.state == .ended {
-            handleOpen()
+            handleEnded(gesture)
         }
-
+    }
+    
+    fileprivate func handleEnded(_ gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: view)
+        
+        let velocity = gesture.velocity(in: view)
+        
+        if isMenuOpened {
+            if abs(velocity.x) > velocityOpenThreshold {
+                handleHide()
+                return
+            }
+            
+            if abs(translation.x) < menuWidth / 2 {
+                handleOpen()
+                
+            } else {
+                handleHide()
+                
+            }
+            
+        } else {
+            if velocity.x > velocityOpenThreshold {
+                handleOpen()
+                return
+            }
+        }
+        
+        if translation.x < menuWidth / 2 {
+            handleHide()
+            
+        } else {
+            handleOpen()
+            
+        }
     }
     
     fileprivate func performAnimation(transform: CGAffineTransform) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity:  1 ,options: .curveEaseOut, animations: {
             self.menuController.view.transform = transform
-//            self.view.transform = transform
+            //            self.view.transform = transform
             self.navigationController?.view.transform = transform
         })
     }
     
     @objc func handleHide() {
-        
+        isMenuOpened = false
         performAnimation(transform: .identity)
         
     }
     
     @objc func handleOpen() {
-    
+        isMenuOpened = true
         performAnimation(transform: CGAffineTransform(translationX: self.menuWidth, y: 0))
         
     }
