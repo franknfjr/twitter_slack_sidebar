@@ -17,31 +17,35 @@ class HomeController: UITableViewController {
         
         tableView.backgroundColor = .red
         setupNavigationItems()
+        
+        setupHomeController()
     }
     
     fileprivate let menuWidth: CGFloat = 300
     
-    @objc func handleHide() {
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            // final position to animate our menuController object
-            self.menuController.view.transform = .identity
+    fileprivate func performAnimation(transform: CGAffineTransform) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity:  1 ,options: .curveEaseOut, animations: {
+            self.menuController.view.transform = transform
         })
-        //
-        //        menuController.view.removeFromSuperview()
-        //        menuController.removeFromParent()
+    }
+    
+    @objc func handleHide() {
+        
+        performAnimation(transform: .identity)
+        
     }
     
     @objc func handleOpen() {
+    
+        performAnimation(transform: CGAffineTransform(translationX: self.menuWidth, y: 0))
+        
+    }
+    
+    fileprivate func setupHomeController() {
         // initial position
         menuController.view.frame = CGRect(x: -menuWidth, y: 0, width: 300, height: self.view.frame.height)
         let mainWindows = UIApplication.shared.keyWindow
         mainWindows?.addSubview(menuController.view)
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            // final position to animate our menuController object
-            self.menuController.view.transform = CGAffineTransform(translationX: self.menuWidth, y: 0)
-        })
-        
         addChild(menuController)
     }
     
