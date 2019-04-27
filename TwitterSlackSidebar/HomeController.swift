@@ -61,7 +61,7 @@ class HomeController: UITableViewController {
             menuController.view.transform = transform
             navigationController?.view.transform = transform
             darkCoverView.transform = transform
-            
+                        
             darkCoverView.alpha = x / menuWidth
         } else if gesture.state == .ended {
             handleEnded(gesture)
@@ -108,6 +108,9 @@ class HomeController: UITableViewController {
             self.menuController.view.transform = transform
             self.navigationController?.view.transform = transform
             self.darkCoverView.transform = transform
+            
+            self.darkCoverView.alpha = transform == .identity ? 0 : 1
+
         })
     }
     
