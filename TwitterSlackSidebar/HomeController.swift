@@ -14,6 +14,7 @@ class HomeController: UITableViewController {
     fileprivate let menuWidth: CGFloat = 300
     fileprivate var isMenuOpened = false
     fileprivate let velocityOpenThreshold: CGFloat = 500
+    fileprivate let darkCoverView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,21 @@ class HomeController: UITableViewController {
         
         setupHomeController()
         
+        setupPanGesture()
+        
+        setupDarkCoverView()
+    }
+    
+    fileprivate func setupDarkCoverView() {
+        darkCoverView.alpha = 0
+        darkCoverView.backgroundColor = UIColor(white: 0, alpha: 0.8)
+        darkCoverView.isUserInteractionEnabled = false
+        let mainWindow = UIApplication.shared.keyWindow
+        mainWindow?.addSubview(darkCoverView)
+        darkCoverView.frame = mainWindow?.frame ?? .zero
+    }
+    
+    fileprivate func setupPanGesture() {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         view.addGestureRecognizer(panGesture)
     }
@@ -44,6 +60,9 @@ class HomeController: UITableViewController {
             
             menuController.view.transform = transform
             navigationController?.view.transform = transform
+            darkCoverView.transform = transform
+            
+            darkCoverView.alpha = x / menuWidth
         } else if gesture.state == .ended {
             handleEnded(gesture)
         }
@@ -87,8 +106,8 @@ class HomeController: UITableViewController {
     fileprivate func performAnimation(transform: CGAffineTransform) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity:  1 ,options: .curveEaseOut, animations: {
             self.menuController.view.transform = transform
-            //            self.view.transform = transform
             self.navigationController?.view.transform = transform
+            self.darkCoverView.transform = transform
         })
     }
     
