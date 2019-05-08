@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */; };
 		BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA1F2283178E00E2F8EC /* SpacerView.swift */; };
+		BB07CA2222831DB700E2F8EC /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA2122831DB700E2F8EC /* ProfileImageView.swift */; };
 		BB0C1CF8226CD0A90072E594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1CF7226CD0A90072E594 /* AppDelegate.swift */; };
 		BB0C1CFA226CD0A90072E594 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1CF9226CD0A90072E594 /* HomeController.swift */; };
 		BB0C1CFD226CD0A90072E594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0C1CFB226CD0A90072E594 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuHeaderView.swift; sourceTree = "<group>"; };
 		BB07CA1F2283178E00E2F8EC /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
+		BB07CA2122831DB700E2F8EC /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		BB0C1CF4226CD0A90072E594 /* TwitterSlackSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSlackSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0C1CF7226CD0A90072E594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB0C1CF9226CD0A90072E594 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			children = (
 				BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */,
 				BB07CA1F2283178E00E2F8EC /* SpacerView.swift */,
+				BB07CA2122831DB700E2F8EC /* ProfileImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB0C1CFA226CD0A90072E594 /* HomeController.swift in Sources */,
+				BB07CA2222831DB700E2F8EC /* ProfileImageView.swift in Sources */,
 				BB0C1D0D226CDA2A0072E594 /* MenuController.swift in Sources */,
 				BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */,
 				BB0C1CF8226CD0A90072E594 /* AppDelegate.swift in Sources */,

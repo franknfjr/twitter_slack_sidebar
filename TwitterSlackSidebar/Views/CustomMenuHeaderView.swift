@@ -13,7 +13,8 @@ class CustomMenuHeaderView: UIView {
     let nameLabel = UILabel()
     let usernameLable = UILabel()
     let statsLabel = UILabel()
-
+    let profileImageView = ProfileImageView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,7 +28,16 @@ class CustomMenuHeaderView: UIView {
     }
     
     fileprivate func setupStackView() {
-        let arrangedSubviews = [UIView(), nameLabel, usernameLable, SpacerView(space: 16), statsLabel]
+        let rightSpacerView = UIView()
+        let arrangedSubviews = [
+            UIView(),
+            UIStackView(arrangedSubviews: [profileImageView, rightSpacerView]),
+            nameLabel,
+            usernameLable,
+            SpacerView(space: 16),
+            statsLabel
+        ]
+        
         let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
         stackView.axis = .vertical
         stackView.spacing = 4
@@ -48,7 +58,23 @@ class CustomMenuHeaderView: UIView {
         nameLabel.text = "Frank Ferreira"
         nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
         usernameLable.text = "@franknfjr"
-        statsLabel.text = "1 Following 14M Followers"
+        profileImageView.image =  #imageLiteral(resourceName: "girl_profile").withRenderingMode(.alwaysOriginal)
+        profileImageView.contentMode = .scaleAspectFit
+        profileImageView.layer.cornerRadius = 48 / 2
+        profileImageView.clipsToBounds = true
+        profileImageView.backgroundColor = .red
+        
+        setupStatsAttributedText()
+    }
+    
+    fileprivate func setupStatsAttributedText() {
+        statsLabel.font = UIFont.systemFont(ofSize: 14)
+        let attributedText = NSMutableAttributedString(string: "1 ", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .medium)])
+        attributedText.append(NSAttributedString(string: "Following ", attributes: [.foregroundColor: UIColor.black]))
+        attributedText.append(NSAttributedString(string: "14M ", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .medium)]))
+        attributedText.append(NSAttributedString(string: "Followers", attributes: [.foregroundColor: UIColor.black]))
+        
+        statsLabel.attributedText = attributedText
     }
     
 }
