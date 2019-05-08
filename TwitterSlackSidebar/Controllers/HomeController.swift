@@ -24,7 +24,7 @@ class HomeController: UITableViewController, UIGestureRecognizerDelegate {
         
         setupHomeController()
         
-        setupPanGesture()
+//        setupPanGesture()
         
         setupDarkCoverView()
     }
@@ -44,9 +44,6 @@ class HomeController: UITableViewController, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(panGesture)
     }
     
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-//        return true
-//    }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
