@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */; };
+		BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA1F2283178E00E2F8EC /* SpacerView.swift */; };
 		BB0C1CF8226CD0A90072E594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1CF7226CD0A90072E594 /* AppDelegate.swift */; };
 		BB0C1CFA226CD0A90072E594 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1CF9226CD0A90072E594 /* HomeController.swift */; };
 		BB0C1CFD226CD0A90072E594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0C1CFB226CD0A90072E594 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuHeaderView.swift; sourceTree = "<group>"; };
+		BB07CA1F2283178E00E2F8EC /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
 		BB0C1CF4226CD0A90072E594 /* TwitterSlackSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSlackSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0C1CF7226CD0A90072E594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB0C1CF9226CD0A90072E594 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB07CA1C228312C100E2F8EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */,
+				BB07CA1F2283178E00E2F8EC /* SpacerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BB0C1CEB226CD0A90072E594 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,7 @@
 		BB0C1CF6226CD0A90072E594 /* TwitterSlackSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				BB07CA1C228312C100E2F8EC /* Views */,
 				BB0C1D09226CD9BD0072E594 /* Controllers */,
 				BB0C1CF7226CD0A90072E594 /* AppDelegate.swift */,
 				BB0C1CFB226CD0A90072E594 /* Main.storyboard */,
@@ -159,7 +173,9 @@
 			files = (
 				BB0C1CFA226CD0A90072E594 /* HomeController.swift in Sources */,
 				BB0C1D0D226CDA2A0072E594 /* MenuController.swift in Sources */,
+				BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */,
 				BB0C1CF8226CD0A90072E594 /* AppDelegate.swift in Sources */,
+				BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */,
 				BB931F7E228273A60038E38B /* BaseSlidingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

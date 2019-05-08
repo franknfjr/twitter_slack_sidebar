@@ -26,7 +26,7 @@ class HomeController: UITableViewController, UIGestureRecognizerDelegate {
         
 //        setupPanGesture()
         
-        setupDarkCoverView()
+//        setupDarkCoverView()
     }
     
     fileprivate func setupDarkCoverView() {
