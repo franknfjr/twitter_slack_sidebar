@@ -10,20 +10,23 @@ import UIKit
 
 class CustomMenuHeaderView: UIView {
 
+    let nameLabel = UILabel()
+    let usernameLable = UILabel()
+    let statsLabel = UILabel()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .white
-        
-        let nameLabel = UILabel()
-        nameLabel.text = "Frank Ferreira"
-        nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
-        let usernameLable = UILabel()
-        usernameLable.text = "@franknfjr"
-        
-        let statsLabel = UILabel()
-        statsLabel.text = "1 Following 14M Followers"
-        
+        setupComponentProps()
+        setupStackView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func setupStackView() {
         let arrangedSubviews = [UIView(), nameLabel, usernameLable, SpacerView(space: 16), statsLabel]
         let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
         stackView.axis = .vertical
@@ -36,13 +39,16 @@ class CustomMenuHeaderView: UIView {
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-
+        
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.layoutMargins = UIEdgeInsets(top: 24, left: 24, bottom: 24, right: 24)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    fileprivate func setupComponentProps() {
+        nameLabel.text = "Frank Ferreira"
+        nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        usernameLable.text = "@franknfjr"
+        statsLabel.text = "1 Following 14M Followers"
     }
     
 }
