@@ -31,11 +31,7 @@ class MenuController: UITableViewController {
         let customMenuHeaderView = CustomMenuHeaderView()
         return customMenuHeaderView
     }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
-    }
-    
+        
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
