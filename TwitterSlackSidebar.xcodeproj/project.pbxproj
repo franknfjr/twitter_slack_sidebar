@@ -18,6 +18,7 @@
 		BB0C1D0D226CDA2A0072E594 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1D0C226CDA2A0072E594 /* MenuController.swift */; };
 		BB931F7E228273A60038E38B /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB931F7D228273A60038E38B /* BaseSlidingController.swift */; };
 		BBB5A04B2283AAA30077C1E6 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A04A2283AAA30077C1E6 /* MenuItemCell.swift */; };
+		BBB5A04F2283BE210077C1E6 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A04E2283BE210077C1E6 /* ListsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BB0C1D0C226CDA2A0072E594 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		BB931F7D228273A60038E38B /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
 		BBB5A04A2283AAA30077C1E6 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		BBB5A04E2283BE210077C1E6 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				BB931F7C228273830038E38B /* Base */,
 				BB0C1CF9226CD0A90072E594 /* HomeController.swift */,
 				BB0C1D0C226CDA2A0072E594 /* MenuController.swift */,
+				BBB5A04E2283BE210077C1E6 /* ListsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */,
 				BB0C1CF8226CD0A90072E594 /* AppDelegate.swift in Sources */,
 				BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */,
+				BBB5A04F2283BE210077C1E6 /* ListsController.swift in Sources */,
 				BB931F7E228273A60038E38B /* BaseSlidingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
