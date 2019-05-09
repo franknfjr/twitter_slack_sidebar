@@ -13,14 +13,14 @@ struct MenuItem {
     let title: String
 }
 
-extension MenuController {
+extension TwitterMenuController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let slidingController = UIApplication.shared.keyWindow?.rootViewController as? BaseSlidingController
         slidingController?.didSelectMenuItem(indexPath: indexPath)
     }
 }
 
-class MenuController: UITableViewController {
+class TwitterMenuController: UITableViewController {
     
     let menuItems = [
         MenuItem(icon: #imageLiteral(resourceName: "profile"), title: "Home"),

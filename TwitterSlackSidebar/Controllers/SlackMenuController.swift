@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatroomsMenuController: UITableViewController {
+class SlackMenuController: UITableViewController {
     
     let chatroomsGroups = [
         ["general", "introductions"],

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB06952E228460C900679BFA /* ChatroomsMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06952D228460C900679BFA /* ChatroomsMenuController.swift */; };
+		BB06952E228460C900679BFA /* SlackMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06952D228460C900679BFA /* SlackMenuController.swift */; };
 		BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */; };
 		BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA1F2283178E00E2F8EC /* SpacerView.swift */; };
 		BB07CA2222831DB700E2F8EC /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07CA2122831DB700E2F8EC /* ProfileImageView.swift */; };
@@ -16,7 +16,7 @@
 		BB0C1CFD226CD0A90072E594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0C1CFB226CD0A90072E594 /* Main.storyboard */; };
 		BB0C1CFF226CD0AA0072E594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0C1CFE226CD0AA0072E594 /* Assets.xcassets */; };
 		BB0C1D02226CD0AA0072E594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0C1D00226CD0AA0072E594 /* LaunchScreen.storyboard */; };
-		BB0C1D0D226CDA2A0072E594 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1D0C226CDA2A0072E594 /* MenuController.swift */; };
+		BB0C1D0D226CDA2A0072E594 /* TwitterMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C1D0C226CDA2A0072E594 /* TwitterMenuController.swift */; };
 		BB931F7E228273A60038E38B /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB931F7D228273A60038E38B /* BaseSlidingController.swift */; };
 		BBB5A04B2283AAA30077C1E6 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A04A2283AAA30077C1E6 /* MenuItemCell.swift */; };
 		BBB5A04F2283BE210077C1E6 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A04E2283BE210077C1E6 /* ListsController.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB06952D228460C900679BFA /* ChatroomsMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomsMenuController.swift; sourceTree = "<group>"; };
+		BB06952D228460C900679BFA /* SlackMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackMenuController.swift; sourceTree = "<group>"; };
 		BB07CA1D228312EF00E2F8EC /* CustomMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuHeaderView.swift; sourceTree = "<group>"; };
 		BB07CA1F2283178E00E2F8EC /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
 		BB07CA2122831DB700E2F8EC /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		BB0C1CFE226CD0AA0072E594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0C1D01226CD0AA0072E594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB0C1D03226CD0AA0072E594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB0C1D0C226CDA2A0072E594 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		BB0C1D0C226CDA2A0072E594 /* TwitterMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterMenuController.swift; sourceTree = "<group>"; };
 		BB931F7D228273A60038E38B /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
 		BBB5A04A2283AAA30077C1E6 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		BBB5A04E2283BE210077C1E6 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
@@ -99,10 +99,10 @@
 			children = (
 				BB931F7C228273830038E38B /* Base */,
 				BB0C1CF9226CD0A90072E594 /* HomeController.swift */,
-				BB0C1D0C226CDA2A0072E594 /* MenuController.swift */,
+				BB0C1D0C226CDA2A0072E594 /* TwitterMenuController.swift */,
 				BBB5A04E2283BE210077C1E6 /* ListsController.swift */,
 				BBB5A0502283C18E0077C1E6 /* BookmarksController.swift */,
-				BB06952D228460C900679BFA /* ChatroomsMenuController.swift */,
+				BB06952D228460C900679BFA /* SlackMenuController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,9 +189,9 @@
 				BB0C1CFA226CD0A90072E594 /* HomeController.swift in Sources */,
 				BBB5A04B2283AAA30077C1E6 /* MenuItemCell.swift in Sources */,
 				BB07CA2222831DB700E2F8EC /* ProfileImageView.swift in Sources */,
-				BB0C1D0D226CDA2A0072E594 /* MenuController.swift in Sources */,
+				BB0C1D0D226CDA2A0072E594 /* TwitterMenuController.swift in Sources */,
 				BB07CA202283178E00E2F8EC /* SpacerView.swift in Sources */,
-				BB06952E228460C900679BFA /* ChatroomsMenuController.swift in Sources */,
+				BB06952E228460C900679BFA /* SlackMenuController.swift in Sources */,
 				BB0C1CF8226CD0A90072E594 /* AppDelegate.swift in Sources */,
 				BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */,
 				BBB5A04F2283BE210077C1E6 /* ListsController.swift in Sources */,
