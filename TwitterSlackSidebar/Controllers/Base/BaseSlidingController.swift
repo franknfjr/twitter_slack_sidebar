@@ -8,6 +8,10 @@
 
 import UIKit
 
+class RightContainerView: UIView {}
+class MenuContainerView: UIView {}
+class DarkContainerView: UIView {}
+
 class BaseSlidingController: UIViewController {
     
     var redViewLeadingConstraint: NSLayoutConstraint!
@@ -15,22 +19,22 @@ class BaseSlidingController: UIViewController {
     fileprivate let velocityThreshold: CGFloat = 500
     fileprivate var isMenuOpened = false
     
-    let redView: UIView = {
-        let v = UIView()
+    let redView: RightContainerView = {
+        let v = RightContainerView()
         v.backgroundColor = .red
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
     
-    let blueView: UIView = {
-        let v = UIView()
+    let blueView: MenuContainerView = {
+        let v = MenuContainerView()
         v.backgroundColor = .blue
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
     
-    let darkCoverView: UIView = {
-        let v = UIView()
+    let darkCoverView: DarkContainerView = {
+        let v = DarkContainerView()
         v.backgroundColor = UIColor(white: 0, alpha: 0.7)
         v.alpha = 0
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -109,27 +113,37 @@ class BaseSlidingController: UIViewController {
     }
     
     func didSelectMenuItem(indexPath: IndexPath) {
-       
+        
+        performRightViewCleanUp()
+        
         switch indexPath.row {
         case 0:
             print("T##items: Any...##Home")
         case 1:
             let listsController = ListsController()
             redView.addSubview(listsController.view)
+            addChild(listsController)
+            rightViewController = listsController
             
         case 2:
-            let bookmarksController = UIViewController()
-            bookmarksController.view.backgroundColor = .orange
+            let bookmarksController = BookmarksController()
             redView.addSubview(bookmarksController.view)
+            addChild(bookmarksController)
+            rightViewController = bookmarksController
 
         default:
-            let momentsController = UIViewController()
-            momentsController.view.backgroundColor = .purple
-            redView.addSubview(momentsController.view)
-
+            print("T##items: Any...##Moments")
+            
         }
         redView.bringSubviewToFront(darkCoverView)
         closeMenu()
+    }
+    
+    var rightViewController: UIViewController?
+    
+    fileprivate func performRightViewCleanUp() {
+        rightViewController?.view.removeFromSuperview()
+        rightViewController?.removeFromParent()
     }
     
     fileprivate func performAnimations() {
@@ -161,10 +175,11 @@ class BaseSlidingController: UIViewController {
     }
     
     fileprivate func setupViewControllers() {
-        let homeController = HomeController()
+//        let homeController = HomeController()
+        rightViewController = HomeController()
         let menuController = MenuController()
         
-        let homeView = homeController.view!
+        let homeView = rightViewController!.view!
         let menuView = menuController.view!
         
         homeView.translatesAutoresizingMaskIntoConstraints = false
@@ -194,7 +209,7 @@ class BaseSlidingController: UIViewController {
             ])
         
         
-        addChild(homeController)
+        addChild(rightViewController!)
         addChild(menuController)
         
     }

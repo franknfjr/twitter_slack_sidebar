@@ -19,6 +19,7 @@
 		BB931F7E228273A60038E38B /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB931F7D228273A60038E38B /* BaseSlidingController.swift */; };
 		BBB5A04B2283AAA30077C1E6 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A04A2283AAA30077C1E6 /* MenuItemCell.swift */; };
 		BBB5A04F2283BE210077C1E6 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A04E2283BE210077C1E6 /* ListsController.swift */; };
+		BBB5A0512283C18E0077C1E6 /* BookmarksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5A0502283C18E0077C1E6 /* BookmarksController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BB931F7D228273A60038E38B /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
 		BBB5A04A2283AAA30077C1E6 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		BBB5A04E2283BE210077C1E6 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
+		BBB5A0502283C18E0077C1E6 /* BookmarksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				BB0C1CF9226CD0A90072E594 /* HomeController.swift */,
 				BB0C1D0C226CDA2A0072E594 /* MenuController.swift */,
 				BBB5A04E2283BE210077C1E6 /* ListsController.swift */,
+				BBB5A0502283C18E0077C1E6 /* BookmarksController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				BB07CA1E228312EF00E2F8EC /* CustomMenuHeaderView.swift in Sources */,
 				BBB5A04F2283BE210077C1E6 /* ListsController.swift in Sources */,
 				BB931F7E228273A60038E38B /* BaseSlidingController.swift in Sources */,
+				BBB5A0512283C18E0077C1E6 /* BookmarksController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

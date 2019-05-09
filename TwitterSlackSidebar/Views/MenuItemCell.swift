@@ -13,6 +13,7 @@ class IconImageView: UIImageView {
         return .init(width: 44, height: 44)
     }
 }
+
 class MenuItemCell: UITableViewCell {
     
     let iconImageView: IconImageView = {
