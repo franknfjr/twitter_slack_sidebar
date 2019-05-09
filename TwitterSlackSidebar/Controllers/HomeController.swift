@@ -26,13 +26,11 @@ class HomeController: UITableViewController, UIGestureRecognizerDelegate {
     
     
     @objc func handleHide() {
-        
-        
+        (UIApplication.shared.keyWindow?.rootViewController as? BaseSlidingController)?.openMenu()
     }
     
     @objc func handleOpen() {
-        
-        
+        (UIApplication.shared.keyWindow?.rootViewController as? BaseSlidingController)?.closeMenu()        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
